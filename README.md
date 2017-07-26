@@ -22,18 +22,30 @@ cd /path/to/project
 ```
 
 **Step 2.** Install cakephp in api directory.
-```composer create-project --prefer-dist cakephp/app api```
+```
+composer create-project --prefer-dist cakephp/app api
+```
 
 **Step 3.** Update the config/app.php with the proper datasource config.
-```vi api/config/app.php```
+```
+vi api/config/app.php
+```
 
 **Step 4.** I created a symlink in /var/www/html/ to the project.
-```cd /var/www/html
-ln -s /path/to/project project```
+```
+cd /var/www/html
+
+ln -s /path/to/project project
+```
 
 **Step 5.**  config/routes.php and add the following.
-```Use Cake\Routing\Router\extensions;
-Router::extensions(['json', 'xml']);```
+```
+Use Cake\Routing\Router\extensions;
+
+Router::extensions(['json', 'xml']);
+```
 
 **Step 6.** src/Controller/AppController.php:
-```use Cake\Controller\Component\RequestHandlerComponent;```
+```
+use Cake\Controller\Component\RequestHandlerComponent;
+```
